@@ -1,0 +1,22 @@
+# IMPORTANT! : This docker-compose.yml must be use it only in DEV stage.
+
+version: '3.1'
+services:
+  web-app-survey-dev-stage:
+      build:
+        context: ./
+        args:
+          BASE_NODE_VERSION: ${BASE_NODE_VERSION}
+          LABEL_AUTHOR_NAME: ${LABEL_AUTHOR_NAME}
+          CONTAINER_APP_CODE_LOCATION: ${CONTAINER_APP_CODE_LOCATION}
+      image: ${REACTJS_CRA_IMAGE_NAME}:${REACTJS_CRA_IMAGE_TAG}
+      container_name: ${REACTJS_CRA_CONTAINER_NAME}
+      volumes:
+        - ${HOST_APP_CODE_LOCATION}:${CONTAINER_APP_CODE_LOCATION}
+      ports:
+        - ${HOST_EXPOSED_PORT_REACTJS_CRA}:${CONTAINER_EXPOSED_PORT_REACTJS_CRA}
+      expose:
+        - ${CONTAINER_EXPOSED_PORT_REACTJS_CRA}
+      restart: on-failure
+      command: tail -f /dev/null
+      

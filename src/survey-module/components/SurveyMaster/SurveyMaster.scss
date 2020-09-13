@@ -1,0 +1,17 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-survey-master {
+    .fake-view {
+        display: flex;
+        flex-direction: column;
+        &.fade-in {
+            -webkit-animation-delay: 0.2s !important;
+            -moz-animation-delay: 0.2s !important;
+            animation-delay: 0.2s !important;
+        }
+    }
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

@@ -1,0 +1,94 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-base-radio-group {
+    margin-bottom: 20px;
+    legend{
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: $base-theme-color-darkblue;
+        margin-bottom: 15px;
+    }
+    .form-check-label{
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: $base-theme-color-lightgray;
+    }
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-size: 14px;
+        color: $base-theme-color-lightgray;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked {
+                ~ .checkmark {
+                    background-color: $base-theme-color-white;
+                    &:after {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+        .checkmark {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            height: 18px;
+            width: 18px;
+            background-color: $base-theme-color-white;
+            border-radius: 50%;
+            border: 1px solid $base-theme-color-lightgray;
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+
+                top: 4px;
+                left: 4px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $base-theme-color-darkblue;
+            }
+        }
+        &:hover {
+            input ~ .checkmark {
+                background-color: #ccc;
+            }
+        }
+    }
+    .help-text {
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        color: $base-theme-color-gray;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .error {
+        color: $base-theme-color-rederror !important;
+    }
+      
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}
+
+        

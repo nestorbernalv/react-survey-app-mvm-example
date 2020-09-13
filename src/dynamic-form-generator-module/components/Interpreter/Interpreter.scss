@@ -1,0 +1,46 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-interpreter {
+    .invalid-view {
+        display:flex;
+        flex-direction: column;
+        .title {
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 0;
+            color: $base-theme-color-darkblue;
+            opacity: 1;
+        }
+        .subtitle {
+            text-align: center;
+            font-family: $base-theme-font-family-raleway;
+            font-size: 16px;
+            letter-spacing: 0;
+            color: $base-theme-color-darkblue;
+            opacity: 1;
+            margin-bottom: 24px;
+        }
+        .emoticon {
+            color: $base-theme-color-yellow;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 60px;
+            font-weight: bold;
+            letter-spacing: 0;
+            opacity: 1;
+            &.error {
+                color: $base-theme-color-rederror !important;
+            }
+        }
+        .cta-container {
+            margin: auto;
+            margin-top: 46px;
+        }
+    }
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

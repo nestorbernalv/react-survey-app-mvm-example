@@ -1,0 +1,23 @@
+
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-redirect-element {  
+    width: 100%;
+    .light-blue-button {
+        padding: 12px 41px;
+        background-color: $base-theme-color-blue;
+        border: 1px solid $base-theme-color-blue;
+        text-transform: uppercase;
+        margin: auto;
+        cursor: pointer;
+        color: $base-theme-color-white !important;
+        &:hover {
+            background-color: $base-theme-color-blue;
+            border: 1px solid $base-theme-color-blue;
+        }
+    }
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

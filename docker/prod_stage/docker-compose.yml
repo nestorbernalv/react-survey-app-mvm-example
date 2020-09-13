@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  web-app-survey-prod-stage:
+      build:
+        context: ../../
+        dockerfile: prod_stage.Dockerfile
+        args:
+          BASE_NODE_VERSION: ${BASE_NODE_VERSION}
+          BASE_NGINX_VERSION: ${BASE_NGINX_VERSION}
+          LABEL_AUTHOR_NAME: ${LABEL_AUTHOR_NAME}
+          CONTAINER_APP_CODE_LOCATION: ${CONTAINER_APP_CODE_LOCATION}
+          HOST_EXPOSED_PORT_REACT_CRA_PRODUCTION_STAGE: ${HOST_EXPOSED_PORT_REACT_CRA_PRODUCTION_STAGE}
+          HOST_NGINX_CONFIG_LOCATION: ${HOST_NGINX_CONFIG_LOCATION}
+      env_file: ./.env
+      image: ${REACTJS_CRA_IMAGE_NAME}:${REACTJS_CRA_IMAGE_TAG}
+      container_name: ${REACTJS_CRA_CONTAINER_NAME}
+      ports:
+        - ${HOST_EXPOSED_PORT_REACT_CRA_PRODUCTION_STAGE}:${CONTAINER_EXPOSED_PORT_REACT_CRA_PRODUCTION_STAGE}
+      expose:
+        - ${CONTAINER_EXPOSED_PORT_REACT_CRA_PRODUCTION_STAGE}
+      restart: on-failure
+      command: nginx -g "daemon off;"

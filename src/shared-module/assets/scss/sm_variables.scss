@@ -1,0 +1,30 @@
+/**
+ * Naming breakpoints
+ * By default, Mobile First apply extra Small(xs) less than 576px
+ * No media query since this is the default in Bootstrap
+ */
+$breakpoints: (
+    /*According to Bootstrap 4*/
+    'small': (min-width: 576px), //Small (sm) 
+    'medium': (min-width: 768px), //Medium (md) 
+    'large': (min-width: 992px), // Large (lg)
+    'extra-large': (min-width: 1200px), // Extra Large (xl) 
+);
+    
+/**
+* Basic theme palet colors
+*/
+$base-theme-color-blue: #29B7EF;
+$base-theme-color-yellow: #FFA401;
+$base-theme-color-darkblue: #0A3253;
+$base-theme-color-gray: #7E7E7E;
+$base-theme-color-lightgray: #ABABAB;
+$base-theme-color-rederror: #F8570A;
+$base-theme-color-white: #FFFFFF;
+$base-theme-color-box-shadow: #00000029;
+
+/** 
+* Basic theme fonts family
+*/
+$base-theme-font-family-raleway: 'Raleway', sans-serif;
+$base-theme-font-family-roboto: 'Roboto', sans-serif;

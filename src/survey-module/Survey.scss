@@ -1,0 +1,9 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-survey {
+
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

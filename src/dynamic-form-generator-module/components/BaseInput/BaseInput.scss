@@ -1,0 +1,44 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-base-input {
+    margin-bottom: 20px;
+    legend{
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 14px;
+        font-family: 'Raleway', sans-serif;
+        color: $base-theme-color-darkblue;
+        margin-bottom: 15px;
+    }
+    textarea {
+        border: 1px solid $base-theme-color-lightgray;
+        width: 100%;
+        max-width: 600px;
+        color: $base-theme-color-gray;
+        font-size: 14px;
+        padding: 10px;
+        &:focus {
+            border: 1px solid $base-theme-color-lightgray !important;
+            box-shadow: none !important;
+        }
+    }
+    .help-text {
+        letter-spacing: 0;
+        opacity: 1;
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        color: $base-theme-color-gray;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .error {
+        color: $base-theme-color-rederror !important;
+    }
+      
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}
+
+        

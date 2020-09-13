@@ -1,0 +1,30 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-base-action {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .resolve {
+        background-color: #FFA401;
+        color: #FFFFFF !important;
+        font-size: 15px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 6px;
+        min-width: 178px;
+        height: 34px;
+        width: 100%;
+    }
+
+    @include respond-to('small') {}
+    @include respond-to('medium') {
+        .resolve {
+            width: auto;
+        }
+    }
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

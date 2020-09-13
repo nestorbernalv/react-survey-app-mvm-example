@@ -1,0 +1,62 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+.cmp-header {
+    height: calc(498px - 56px);
+    width: 100%;
+    margin-top: 56px;
+    /*background-image: url(./assets/images/header-desktop.jpg);*/
+    background-image: url(https://static.surveys.autofact.com/header/header-desktop.jpg);
+    background-color: $base-theme-color-darkblue;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: right;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 22px;
+        .logo-container {
+            width: 262px;
+            height: 118px;
+            .autofact-logo {
+                width:100%;
+                height: 100%;
+                max-width: 262px;
+                max-height: 118px;
+            }
+        }
+        .main-title {
+            width: 100%;
+            max-width: 604px;
+            text-align: center;
+            font-family: $base-theme-font-family-raleway;
+            letter-spacing: 0;
+            color: #FFFFFF;
+            opacity: 1;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+    }
+    
+    @include respond-to('small') {}
+    @include respond-to('medium') {
+        height: 498px;
+        margin-top: 0;
+        .container {
+            .logo-container {
+                width: 366px;
+                height: 164px;
+                .autofact-logo {
+                    max-width: 366px;
+                    max-height: 164px;
+                }
+            }
+            .main-title {
+                font-size: 38px;
+                max-width: 100%;
+            }
+        }
+        
+    }
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}

@@ -1,0 +1,16 @@
+//@import './../gs_style_importer.scss';
+@import 'shared-module/assets/scss/sm_style_importer.scss';
+/**
+* Override/Customize Bootstrap Styles 
+*/
+
+
+/** 
+* Import Bootstrap and its default variables
+*/
+@import '~bootstrap/scss/bootstrap.scss';
+
+
+/**
+* General Theme Styles 
+*/

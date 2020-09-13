@@ -1,0 +1,24 @@
+
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-main-navbar {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    z-index: 10;
+    top:0;
+    background-color: $base-theme-color-darkblue;
+    .autofact-logo {
+        width: 122px;
+        height: 55px;
+    }
+
+    @include respond-to('medium') {
+        display: none;
+    }
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {
+        
+    }
+
+}

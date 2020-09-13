@@ -1,0 +1,22 @@
+@import 'shared-module/assets/scss/themes/sm_default_theme.scss';
+
+.cmp-overlay-spinner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    .spinner-border {
+        color: $base-theme-color-darkblue;
+    }
+
+    @include respond-to('small') {}
+    @include respond-to('medium') {}
+    @include respond-to('large') {}
+    @include respond-to('extra-large') {}
+}
